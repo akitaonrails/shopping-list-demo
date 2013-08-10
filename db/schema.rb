@@ -15,11 +15,11 @@ ActiveRecord::Schema.define(:version => 20130810173107) do
 
   create_table "shopping_items", :force => true do |t|
     t.string   "name"
-    t.integer  "quantity"
-    t.float    "price"
+    t.integer  "quantity",         :default => 0
+    t.float    "price",            :default => 0.0
     t.integer  "shopping_list_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   add_index "shopping_items", ["shopping_list_id"], :name => "index_shopping_items_on_shopping_list_id"
