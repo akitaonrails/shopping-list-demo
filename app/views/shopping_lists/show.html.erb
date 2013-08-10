@@ -1,18 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<h2><%= @shopping_list.name %></h2>
 <p>
-  <b>Name:</b>
-  <%= @shopping_list.name %>
-</p>
-
-<p>
-  <b>Description:</b>
   <%= @shopping_list.description %>
 </p>
-
 <p>
-  <b>Total:</b>
-  <%= @shopping_list.total %>
+  <b>Tax Rate:</b>
+  <%= @shopping_list.tax_rate %>
 </p>
 
 <h3>Items</h3>
@@ -22,6 +16,7 @@
       <td>Name</td>
       <td>Quantity</td>
       <td>Price</td>
+      <td>Total</td>
     </tr>
   </thead>
   <tbody>
@@ -30,8 +25,13 @@
       <td><%= item.name %></td>
       <td><%= item.quantity %></td>
       <td><%= item.price %></td>
+      <td><strong><%= item.total %><strong></td>
     </tr>
     <% end %>
+    <tr>
+      <td colspan="3"></td>
+      <td><strong><%= @shopping_list.total %></strong></td>
+    </tr>
   </tbody>
 </table>
 
