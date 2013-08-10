@@ -1,4 +1,7 @@
 ShoppingListDemo::Application.routes.draw do
+  resources :shopping_lists
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
