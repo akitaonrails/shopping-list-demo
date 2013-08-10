@@ -4,10 +4,17 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description, input_html: { rows: 2 } %>
-    <%= f.input :total %>
+  </div>
+
+  <h3>Items</h3>
+  <div id="shopping_items">
+    <%= f.simple_fields_for :shopping_items do |item| %>
+      <%= render "shopping_item_fields", :f => item %>
+    <% end %>
   </div>
 
   <div class="form-actions">
+    <%= link_to_add_association 'add item', f, :shopping_items, :class => "btn btn-default" %>
     <%= f.button :submit %>
   </div>
 <% end %>

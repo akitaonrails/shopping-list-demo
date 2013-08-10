@@ -1,0 +1,5 @@
+en:
+  activerecord:
+    models:
+      shopping_list: Shopping List
+      shopping_item: Shopping Item

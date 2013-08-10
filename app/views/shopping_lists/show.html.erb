@@ -15,6 +15,25 @@
   <%= @shopping_list.total %>
 </p>
 
+<h3>Items</h3>
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Quantity</td>
+      <td>Price</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shopping_list.shopping_items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.quantity %></td>
+      <td><%= item.price %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_shopping_list_path(@shopping_list) %> |
 <%= link_to 'Back', shopping_lists_path %>
