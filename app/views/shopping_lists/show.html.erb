@@ -24,13 +24,13 @@
     <tr>
       <td><%= item.name %></td>
       <td><%= item.quantity %></td>
-      <td><%= item.price %></td>
-      <td><strong><%= item.sub_total %><strong></td>
+      <td><%= number_to_currency item.price %></td>
+      <td><strong><%= number_to_currency item.sub_total %><strong></td>
     </tr>
     <% end %>
     <tr>
       <td colspan="3"><strong>Total (with taxes)</strong></td>
-      <td><strong><%= @shopping_list.total %></strong></td>
+      <td><strong><%= number_to_currency @shopping_list.total %></strong></td>
     </tr>
   </tbody>
 </table>
