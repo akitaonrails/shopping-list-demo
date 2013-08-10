@@ -5,6 +5,7 @@
   ```
   git clone https://github.com/akitaonrails/shopping-list-demo.git
   cd shopping-list-demo
+  git checkout -b bug b156b84dfaf2968a218955e09c8d15a9048e8f59
   bundle install
   rake db:migrate
   rails s # or rake spec

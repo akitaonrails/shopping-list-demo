@@ -25,11 +25,11 @@
       <td><%= item.name %></td>
       <td><%= item.quantity %></td>
       <td><%= item.price %></td>
-      <td><strong><%= item.total %><strong></td>
+      <td><strong><%= item.sub_total %><strong></td>
     </tr>
     <% end %>
     <tr>
-      <td colspan="3"></td>
+      <td colspan="3"><strong>Total (with taxes)</strong></td>
       <td><strong><%= @shopping_list.total %></strong></td>
     </tr>
   </tbody>

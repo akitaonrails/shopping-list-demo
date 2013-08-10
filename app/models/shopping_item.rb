@@ -5,8 +5,4 @@ class ShoppingItem < ActiveRecord::Base
   def sub_total
     quantity * price
   end
-
-  def total
-    sub_total + ( sub_total * shopping_list.tax_rate )
-  end
 end
